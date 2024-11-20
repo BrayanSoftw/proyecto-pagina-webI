@@ -16,5 +16,33 @@
     <br>
     <button type="button" onclick="myFunction()">Click me</button>
     <script type="text/javascript" src="resources/js/app.js"></script>
+    <!--MAYUSCULAS-->
+    <h1>Convertir texto a mayúsculas</h1>
+    <input type="text" id="inputTexto" placeholder="Escribe algo...">
+    <button onclick="convertirAMayusculas()">Convertir</button>
+    <p id="resultado"></p>
+
+    <script>
+        function convertirAMayusculas() {
+            let texto = document.getElementById("inputTexto").value;
+            let textoMayusculas = texto.toUpperCase();
+            document.getElementById("resultado").innerText = textoMayusculas;
+        }
+    </script>
+    <!---->
+    <!--minusculas-->
+    <h1>Convertir texto a minúsculas</h1>
+    <input type="text" id="inputTexto1" placeholder="Escribe algo...">
+    <button onclick="convertirAMinusculas()">Convertir</button>
+    <p id="resultado1"></p>
+
+    <script>
+        function convertirAMinusculas() {
+            let texto = document.getElementById("inputTexto1").value;
+            let textoMinusculas = texto.toLowerCase();
+            document.getElementById("resultado1").innerText = textoMinusculas;
+        }
+    </script>
+    <!---->
 </body>
 </html>

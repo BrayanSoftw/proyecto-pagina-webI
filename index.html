@@ -6,96 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hi World JS/HTML<h1>
-    <a href="libro.html">Mi libro</a>
+    <h1>Lenguaje de alto Nivel<h1>
+    <a href="funciones.html">funciones</a>
     <p id="demo"></p>
-        Hi to all!!!
+        Bienvenidos a la FUP!!!
     <p id="operaciones"></p>
     <p id="comparacion"></p>
     <p id="logicos"></p>
     <br>
-    <button type="button" onclick="myFunction()">Click me</button>
-    <script type="text/javascript" src="resources/js/app.js"></script>
-    <!--MAYUSCULAS-->
-    <h1>Convertir texto a mayúsculas</h1>
-    <input type="text" id="inputTexto" placeholder="Escribe algo...">
-    <button onclick="convertirAMayusculas()">Convertir</button>
-    <p id="resultado"></p>
-
-    <script>
-        function convertirAMayusculas() {
-            let texto = document.getElementById("inputTexto").value;
-            let textoMayusculas = texto.toUpperCase();
-            document.getElementById("resultado").innerText = textoMayusculas;
-        }
-    </script>
-    <!---->
-    <!--minusculas-->
-    <h1>Convertir texto a minúsculas</h1>
-    <input type="text" id="inputTexto1" placeholder="Escribe algo...">
-    <button onclick="convertirAMinusculas()">Convertir</button>
-    <p id="resultado1"></p>
-
-    <script>
-        function convertirAMinusculas() {
-            let texto = document.getElementById("inputTexto1").value;
-            let textoMinusculas = texto.toLowerCase();
-            document.getElementById("resultado1").innerText = textoMinusculas;
-        }
-    </script>
-    <!---->
-
-    <h2>Extraer parte del texto (slice)</h2>
-    <input type="text" id="inputTextoSlice" placeholder="Escribe algo...">
-    <input type="number" id="startIndex" placeholder="Inicio">
-    <input type="number" id="endIndex" placeholder="Fin">
-    <button onclick="usarSlice()">Extraer</button>
-    <p id="resultadoSlice"></p>
-
-    <script>
-        function usarSlice() {
-            let texto = document.getElementById("inputTextoSlice").value;
-            let inicio = parseInt(document.getElementById("startIndex").value);
-            let fin = parseInt(document.getElementById("endIndex").value);
-            let textoExtraido = texto.slice(inicio, fin);
-            document.getElementById("resultadoSlice").innerText = textoExtraido;
-        }
-    </script>
-
-    <!-- SUBSTRING -->
-    <h2>Extraer parte del texto (substring)</h2>
-    <input type="text" id="inputTextoSubstring" placeholder="Escribe algo...">
-    <input type="number" id="startIndexSub" placeholder="Inicio">
-    <input type="number" id="endIndexSub" placeholder="Fin">
-    <button onclick="usarSubstring()">Extraer</button>
-    <p id="resultadoSubstring"></p>
-
-    <script>
-        function usarSubstring() {
-            let texto = document.getElementById("inputTextoSubstring").value;
-            let inicio = parseInt(document.getElementById("startIndexSub").value);
-            let fin = parseInt(document.getElementById("endIndexSub").value);
-            let textoExtraido = texto.substring(inicio, fin);
-            document.getElementById("resultadoSubstring").innerText = textoExtraido;
-        }
-    </script>
-
-    <!-- SUBSTR -->
-    <h2>Extraer parte del texto (substr)</h2>
-    <input type="text" id="inputTextoSubstr" placeholder="Escribe algo...">
-    <input type="number" id="startIndexSubstr" placeholder="Inicio">
-    <input type="number" id="lengthSubstr" placeholder="Longitud">
-    <button onclick="usarSubstr()">Extraer</button>
-    <p id="resultadoSubstr"></p>
-
-    <script>
-        function usarSubstr() {
-            let texto = document.getElementById("inputTextoSubstr").value;
-            let inicio = parseInt(document.getElementById("startIndexSubstr").value);
-            let longitud = parseInt(document.getElementById("lengthSubstr").value);
-            let textoExtraido = texto.substr(inicio, longitud);
-            document.getElementById("resultadoSubstr").innerText = textoExtraido;
-        }
-    </script>
+    
 </body>
 </html>

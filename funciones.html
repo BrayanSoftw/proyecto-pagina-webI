@@ -36,7 +36,7 @@
         }
     </script>
     <!---->
-
+    <!--string slice-->
     <h2>Extraer parte del texto (slice)</h2>
     <input type="text" id="inputTextoSlice" placeholder="Escribe algo...">
     <input type="number" id="startIndex" placeholder="Inicio">
@@ -53,7 +53,7 @@
             document.getElementById("resultadoSlice").innerText = textoExtraido;
         }
     </script>
-
+ 
     <!-- SUBSTRING -->
     <h2>Extraer parte del texto (substring)</h2>
     <input type="text" id="inputTextoSubstring" placeholder="Escribe algo...">
@@ -92,5 +92,93 @@
     <p id="msj"></p>
     <!--Se enlaza con el codigo de JavaScript-->
     <script type="text/javascript" src="resources/js/libro.js"></script>
+
+    <!-- Ejemplos de Bucles -->
+    <h2>Ejemplos de Bucles</h2>
+    
+    <!-- Bucle For -->
+    <h3>For Loop:</h3>
+    <button onclick="forLoop()">Ejecutar For</button>
+    <p id="resultadoFor"></p>
+
+    <script>
+        function forLoop() {
+            let resultado = '';
+            for (let i = 0; i < 5; i++) {
+                resultado += `Número: ${i}<br>`;
+            }
+            document.getElementById("resultadoFor").innerHTML = resultado;
+        }
+    </script>
+
+    <!-- Bucle For/In -->
+    <h3>For/In Loop:</h3>
+    <button onclick="forInLoop()">Ejecutar For/In</button>
+    <p id="resultadoForIn"></p>
+
+    <script>
+        function forInLoop() {
+            const objeto = {a: 1, b: 2, c: 3};
+            let resultado = '';
+            for (let key in objeto) {
+                resultado += `${key}: ${objeto[key]}<br>`;
+            }
+            document.getElementById("resultadoForIn").innerHTML = resultado;
+        }
+    </script>
+
+    <!-- Bucle For/Of -->
+    <h3>For/Of Loop:</h3>
+    <button onclick="forOfLoop()">Ejecutar For/Of</button>
+    <p id="resultadoForOf"></p>
+
+    <script>
+        function forOfLoop() {
+            const array = [10, 20, 30, 40];
+            let resultado = '';
+            for (let value of array) {
+                resultado += `Valor: ${value}<br>`;
+            }
+            document.getElementById("resultadoForOf").innerHTML = resultado;
+        }
+    </script>
+
+    <!-- Bucle While -->
+    <h3>While Loop:</h3>
+    <button onclick="whileLoop()">Ejecutar While</button>
+    <p id="resultadoWhile"></p>
+
+    <script>
+        function whileLoop() {
+            let i = 0;
+            let resultado = '';
+            while (i < 5) {
+                resultado += `Número: ${i}<br>`;
+                i++;
+            }
+            document.getElementById("resultadoWhile").innerHTML = resultado;
+        }
+    </script>
+
+    <!-- Bucle Do While -->
+    <h3>Do While Loop:</h3>
+    <button onclick="doWhileLoop()">Ejecutar Do/While</button>
+    <p id="resultadoDoWhile"></p>
+
+    <script>
+        function doWhileLoop() {
+            let i = 0;
+            let resultado = '';
+            do {
+                resultado += `Número: ${i}<br>`;
+                i++;
+            } while (i < 5);
+            document.getElementById("resultadoDoWhile").innerHTML = resultado;
+        }
+    </script>
+
+    <p id="msj"></p>
+
+    
 </body>
 </html>

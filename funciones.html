@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>libro</title>
 </head>
-<body>
-    <button type="button" onclick="myFunction()">Click me</button>
+<body id="miDiv" style="width: 100%; height: 100vh;">
+    <script src="script.js"></script>
+    <!--<button type="button" onclick="myFunction()">Click me</button>-->
     <script type="text/javascript" src="resources/js/app.js"></script>
     <!--MAYUSCULAS-->
     <h1>Convertir texto a mayúsculas</h1>
@@ -53,9 +54,24 @@
             document.getElementById("resultadoSlice").innerText = textoExtraido;
         }
     </script>
- 
-    <!-- SUBSTRING -->
     <h2>Extraer parte del texto (substring)</h2>
+    <input type="text" id="inputTextoSubstring" placeholder="Escribe algo...">
+    <input type="number" id="startIndexSub" placeholder="Inicio">
+    <input type="number" id="endIndexSub" placeholder="Fin">
+    <button onclick="usarSubstring()">Extraer</button>
+    <p id="resultadoSubstring"></p>
+    
+    <script>
+        function usarSubstring() {
+            let texto = document.getElementById("inputTextoSubstring").value;
+            let inicio = parseInt(document.getElementById("startIndexSub").value) || 0;
+            let fin = parseInt(document.getElementById("endIndexSub").value);
+            let textoExtraido = texto.substring(inicio, fin);
+            document.getElementById("resultadoSubstring").innerText = textoExtraido;
+        }
+    </script> 
+    <!-- SUBSTRING -->
+    <!--<h2>Extraer parte del texto (substring)</h2>
     <input type="text" id="inputTextoSubstring" placeholder="Escribe algo...">
     <input type="number" id="startIndexSub" placeholder="Inicio">
     <input type="number" id="endIndexSub" placeholder="Fin">
@@ -71,7 +87,7 @@
             document.getElementById("resultadoSubstring").innerText = textoExtraido;
         }
     </script>
-
+-->
     <!-- SUBSTR -->
     <h2>Extraer parte del texto (substr)</h2>
     <input type="text" id="inputTextoSubstr" placeholder="Escribe algo...">
